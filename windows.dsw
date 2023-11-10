@@ -27,7 +27,31 @@ Package=<4>
 
 ###############################################################################
 
+Project: "CheckerMouse"=".\CheckerMouse\CheckerMouse.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
 Project: "Clover"=".\Clover\Clover.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "ConnectMouse"=".\ConnectMouse\ConnectMouse.dsp" - Package Owner=<4>
 
 Package=<5>
 {{{
@@ -136,6 +160,18 @@ Package=<4>
 ###############################################################################
 
 Project: "SysMetrics"=".\SysMetrics\SysMetrics.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Typer"=".\Typer\Typer.dsp" - Package Owner=<4>
 
 Package=<5>
 {{{

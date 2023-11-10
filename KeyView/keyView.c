@@ -45,7 +45,7 @@ LRESULT CALLBACK WndProc(HWND hwnd,UINT message,WPARAM wParam,LPARAM lParam){
 
 			ReleaseDC(hwnd,hdc);
 			
-			//调内存
+			//调内存 allocate memory for display lines
 			if (pmsg)
                free (pmsg) ;
 
@@ -59,7 +59,7 @@ LRESULT CALLBACK WndProc(HWND hwnd,UINT message,WPARAM wParam,LPARAM lParam){
 			    cyClient = HIWORD (lParam) ;
 			}
 			
-			//显示
+			//显示 calculate scrolling rectangle
 			rectScroll.left   = 0 ;
 			rectScroll.right  = cxClient ;
 			rectScroll.top    = cyChar ;

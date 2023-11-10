@@ -1,25 +1,53 @@
 #include <windows.h>
 
+#define MAXPOINTS 1000
+
 LRESULT CALLBACK WndProc(HWND hwnd,UINT message,WPARAM wParam,LPARAM lParam){
 	HDC hdc;
 	PAINTSTRUCT ps;
-	RECT rect;
+	static POINT pt[MAXPOINTS] ;
+    static int   iCount ;
+	int i,j;
+	
 	//0x00000024
 	switch(message){
 		case WM_CREATE:
-			PlaySound(TEXT("hellowin.wav"),NULL,SND_FILENAME | SND_ASYNC);
+			
 
 			return 0;
 
-		case WM_SIZE:
+		case WM_LBUTTONDOWN:
+			iCount = 0;
+
+			return 0;
+
+		case WM_LBUTTONUP:
+			InvalidateRect (hwnd, NULL, TRUE);
+
+			return 0;
+
+		case WM_MOUSEMOVE:
+			if(wParam & MK_LBUTTON && iCount < 1000){
+				pt[iCount].x = LOWORD(lParam);
+				pt[iCount++].y = HIWORD (lParam) ;
+
+				hdc = GetDC (hwnd) ;
+                SetPixel (hdc, LOWORD (lParam), HIWORD (lParam), 0) ;
+                ReleaseDC (hwnd, hdc) ;
+			}
 
 			return 0;
 
 		case WM_PAINT:
 			hdc = BeginPaint(hwnd,&ps);
-			//left 0x00000000 top 0x00000000 right 0x000003f1 1009 bottom 0x000001ef 495
-			GetClientRect(hwnd,&rect);
-			DrawText(hdc,TEXT("Hello,Windows 98"),-1,&rect,DT_SINGLELINE | DT_CENTER | DT_VCENTER);
+			
+			for(i = 0;i < iCount - 1;i++){
+				for(j = i + 1;j < iCount;j++){
+					MoveToEx (hdc, pt[i].x, pt[i].y, NULL) ;
+                    LineTo(hdc, pt[j].x, pt[j].y) ;
+				}
+			}
+
 			EndPaint(hwnd,&ps);
 			
 			return 0;
@@ -36,7 +64,7 @@ LRESULT CALLBACK WndProc(HWND hwnd,UINT message,WPARAM wParam,LPARAM lParam){
 
 int WINAPI WinMain(HINSTANCE hInstance,HINSTANCE hPrevInstance,LPSTR lpCmdLine,int nShowCmd){
 	WNDCLASS wndclass;
-	static TCHAR szAppName[] = TEXT("helloWindows");
+	static TCHAR szAppName[] = TEXT("ConnectMouse");
 	HWND hwnd;
 	MSG msg;
 	
@@ -56,7 +84,7 @@ int WINAPI WinMain(HINSTANCE hInstance,HINSTANCE hPrevInstance,LPSTR lpCmdLine,i
 		return 0;
 	}
 
-	hwnd = CreateWindow(szAppName,TEXT("The hello program"),WS_OVERLAPPEDWINDOW,CW_USEDEFAULT,CW_USEDEFAULT,CW_USEDEFAULT,CW_USEDEFAULT,NULL,NULL,hInstance,NULL);
+	hwnd = CreateWindow(szAppName,TEXT("The ConnectMouse program"),WS_OVERLAPPEDWINDOW,CW_USEDEFAULT,CW_USEDEFAULT,CW_USEDEFAULT,CW_USEDEFAULT,NULL,NULL,hInstance,NULL);
 	ShowWindow(hwnd,nShowCmd);
 	//UpdateWindow(hwnd);
 	while(GetMessage(&msg,NULL,0,0)){
