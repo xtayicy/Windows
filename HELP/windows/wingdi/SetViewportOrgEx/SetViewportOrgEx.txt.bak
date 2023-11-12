@@ -1,0 +1,1 @@
+WINGDIAPI BOOL  WINAPI SetViewportOrgEx(HDC, int, int, LPPOINT);

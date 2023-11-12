@@ -1,0 +1,9 @@
+WINUSERAPI
+BOOL
+WINAPI
+ScrollWindow(
+    HWND hWnd,
+    int XAmount,
+    int YAmount,
+    CONST RECT *lpRect,
+    CONST RECT *lpClipRect);

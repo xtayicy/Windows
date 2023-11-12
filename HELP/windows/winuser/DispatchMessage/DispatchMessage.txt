@@ -1,0 +1,15 @@
+WINUSERAPI
+LONG
+WINAPI
+DispatchMessageA(
+    CONST MSG *lpMsg);
+WINUSERAPI
+LONG
+WINAPI
+DispatchMessageW(
+    CONST MSG *lpMsg);
+#ifdef UNICODE
+#define DispatchMessage  DispatchMessageW
+#else
+#define DispatchMessage  DispatchMessageA
+#endif // !UNICODE

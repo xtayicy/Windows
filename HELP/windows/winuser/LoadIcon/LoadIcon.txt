@@ -1,0 +1,49 @@
+WINUSERAPI
+HICON
+WINAPI
+LoadIconA(
+    HINSTANCE hInstance,
+    LPCSTR lpIconName);
+WINUSERAPI
+HICON
+WINAPI
+LoadIconW(
+    HINSTANCE hInstance,
+    LPCWSTR lpIconName);
+#ifdef UNICODE
+#define LoadIcon  LoadIconW
+#else
+#define LoadIcon  LoadIconA
+#endif // !UNICODE
+
+#ifndef NOICONS
+
+// begin_r_winuser
+/*
+ * Standard Icon IDs
+ */
+#ifdef RC_INVOKED
+#define IDI_APPLICATION     32512
+#define IDI_HAND            32513
+#define IDI_QUESTION        32514
+#define IDI_EXCLAMATION     32515
+#define IDI_ASTERISK        32516
+#if(WINVER >= 0x0400)
+#define IDI_WINLOGO         32517
+#endif /* WINVER >= 0x0400 */
+#else
+#define IDI_APPLICATION     MAKEINTRESOURCE(32512)
+#define IDI_HAND            MAKEINTRESOURCE(32513)
+#define IDI_QUESTION        MAKEINTRESOURCE(32514)
+#define IDI_EXCLAMATION     MAKEINTRESOURCE(32515)
+#define IDI_ASTERISK        MAKEINTRESOURCE(32516)
+#if(WINVER >= 0x0400)
+#define IDI_WINLOGO         MAKEINTRESOURCE(32517)
+#endif /* WINVER >= 0x0400 */
+#endif /* RC_INVOKED */
+
+#if(WINVER >= 0x0400)
+#define IDI_WARNING     IDI_EXCLAMATION
+#define IDI_ERROR       IDI_HAND
+#define IDI_INFORMATION IDI_ASTERISK
+#endif /* WINVER >= 0x0400 */

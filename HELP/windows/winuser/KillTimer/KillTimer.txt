@@ -1,0 +1,6 @@
+WINUSERAPI
+BOOL
+WINAPI
+KillTimer(
+    HWND hWnd,
+    UINT uIDEvent);

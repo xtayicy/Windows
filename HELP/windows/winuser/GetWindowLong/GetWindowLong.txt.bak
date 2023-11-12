@@ -1,0 +1,18 @@
+WINUSERAPI
+LONG
+WINAPI
+GetWindowLongA(
+    HWND hWnd,
+    int nIndex);
+WINUSERAPI
+LONG
+WINAPI
+GetWindowLongW(
+    HWND hWnd,
+    int nIndex);
+#ifdef UNICODE
+#define GetWindowLong  GetWindowLongW
+#else
+#define GetWindowLong  GetWindowLongA
+#endif // !UNICODE
+

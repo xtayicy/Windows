@@ -1,0 +1,17 @@
+WINUSERAPI
+BOOL
+WINAPI
+SetScrollRange(
+    HWND hWnd,
+    int nBar,
+    int nMinPos,
+    int nMaxPos,
+    BOOL bRedraw);
+
+/*
+ * Scroll Bar Constants
+ */
+#define SB_HORZ             0
+#define SB_VERT             1
+#define SB_CTL              2
+#define SB_BOTH             3

@@ -1,0 +1,7 @@
+WINMMAPI BOOL WINAPI PlaySoundA(LPCSTR pszSound, HMODULE hmod, DWORD fdwSound);
+WINMMAPI BOOL WINAPI PlaySoundW(LPCWSTR pszSound, HMODULE hmod, DWORD fdwSound);
+#ifdef UNICODE
+#define PlaySound  PlaySoundW
+#else
+#define PlaySound  PlaySoundA
+#endif // !UNICODE

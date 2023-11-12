@@ -1,0 +1,6 @@
+WINUSERAPI
+HDC
+WINAPI
+BeginPaint(
+    HWND hWnd,
+    LPPAINTSTRUCT lpPaint);

@@ -1,0 +1,17 @@
+WINUSERAPI
+HMENU
+WINAPI
+LoadMenuA(
+    HINSTANCE hInstance,
+    LPCSTR lpMenuName);
+WINUSERAPI
+HMENU
+WINAPI
+LoadMenuW(
+    HINSTANCE hInstance,
+    LPCWSTR lpMenuName);
+#ifdef UNICODE
+#define LoadMenu  LoadMenuW
+#else
+#define LoadMenu  LoadMenuA
+#endif // !UNICODE

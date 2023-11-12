@@ -1,0 +1,6 @@
+WINBASEAPI
+VOID
+WINAPI
+GetLocalTime(
+    LPSYSTEMTIME lpSystemTime
+    );

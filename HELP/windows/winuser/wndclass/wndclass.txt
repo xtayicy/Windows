@@ -1,0 +1,40 @@
+typedef struct tagWNDCLASSW {
+    UINT        style;
+    WNDPROC     lpfnWndProc;
+    int         cbClsExtra;
+    int         cbWndExtra;
+    HINSTANCE   hInstance;
+    HICON       hIcon;
+    HCURSOR     hCursor;
+    HBRUSH      hbrBackground;
+    LPCWSTR     lpszMenuName;
+    LPCWSTR     lpszClassName;
+} WNDCLASSW, *PWNDCLASSW, NEAR *NPWNDCLASSW, FAR *LPWNDCLASSW;
+#ifdef UNICODE
+typedef WNDCLASSW WNDCLASS;
+typedef PWNDCLASSW PWNDCLASS;
+typedef NPWNDCLASSW NPWNDCLASS;
+typedef LPWNDCLASSW LPWNDCLASS;
+#else
+typedef WNDCLASSA WNDCLASS;
+typedef PWNDCLASSA PWNDCLASS;
+typedef NPWNDCLASSA NPWNDCLASS;
+typedef LPWNDCLASSA LPWNDCLASS;
+#endif // UNICODE
+
+/*
+ * Class styles
+ */
+#define CS_VREDRAW          0x0001
+#define CS_HREDRAW          0x0002
+#define CS_DBLCLKS          0x0008
+#define CS_OWNDC            0x0020
+#define CS_CLASSDC          0x0040
+#define CS_PARENTDC         0x0080
+#define CS_NOCLOSE          0x0200
+#define CS_SAVEBITS         0x0800
+#define CS_BYTEALIGNCLIENT  0x1000
+#define CS_BYTEALIGNWINDOW  0x2000
+#define CS_GLOBALCLASS      0x4000
+
+#define CS_IME              0x00010000

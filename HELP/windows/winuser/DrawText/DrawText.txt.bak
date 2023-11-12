@@ -1,0 +1,23 @@
+WINUSERAPI
+int
+WINAPI
+DrawTextA(
+    HDC hDC,
+    LPCSTR lpString,
+    int nCount,
+    LPRECT lpRect,
+    UINT uFormat);
+WINUSERAPI
+int
+WINAPI
+DrawTextW(
+    HDC hDC,
+    LPCWSTR lpString,
+    int nCount,
+    LPRECT lpRect,
+    UINT uFormat);
+#ifdef UNICODE
+#define DrawText  DrawTextW
+#else
+#define DrawText  DrawTextA
+#endif // !UNICODE

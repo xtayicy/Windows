@@ -1,0 +1,6 @@
+WINUSERAPI
+BOOL
+WINAPI
+ShowWindow(
+    HWND hWnd,
+    int nCmdShow);

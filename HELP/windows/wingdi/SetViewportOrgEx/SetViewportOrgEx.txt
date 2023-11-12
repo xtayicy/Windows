@@ -1,0 +1,2 @@
+设置原点在哪
+WINGDIAPI BOOL  WINAPI SetViewportOrgEx(HDC, int, int, LPPOINT);

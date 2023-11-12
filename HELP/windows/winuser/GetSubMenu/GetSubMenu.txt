@@ -1,0 +1,6 @@
+WINUSERAPI
+HMENU
+WINAPI
+GetSubMenu(
+    HMENU hMenu,
+    int nPos);

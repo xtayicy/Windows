@@ -1,0 +1,23 @@
+typedef struct tagWNDCLASSW {
+    UINT        style;
+    WNDPROC     lpfnWndProc;
+    int         cbClsExtra;
+    int         cbWndExtra;
+    HINSTANCE   hInstance;
+    HICON       hIcon;
+    HCURSOR     hCursor;
+    HBRUSH      hbrBackground;
+    LPCWSTR     lpszMenuName;
+    LPCWSTR     lpszClassName;
+} WNDCLASSW, *PWNDCLASSW, NEAR *NPWNDCLASSW, FAR *LPWNDCLASSW;
+#ifdef UNICODE
+typedef WNDCLASSW WNDCLASS;
+typedef PWNDCLASSW PWNDCLASS;
+typedef NPWNDCLASSW NPWNDCLASS;
+typedef LPWNDCLASSW LPWNDCLASS;
+#else
+typedef WNDCLASSA WNDCLASS;
+typedef PWNDCLASSA PWNDCLASS;
+typedef NPWNDCLASSA NPWNDCLASS;
+typedef LPWNDCLASSA LPWNDCLASS;
+#endif // UNICODE

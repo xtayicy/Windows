@@ -1,0 +1,6 @@
+WINUSERAPI
+HWND
+WINAPI
+GetDlgItem(
+    HWND hDlg,
+    int nIDDlgItem);

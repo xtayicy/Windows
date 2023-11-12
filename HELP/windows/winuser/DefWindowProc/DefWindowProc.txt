@@ -1,0 +1,31 @@
+WINUSERAPI
+#ifndef _MAC
+LRESULT
+WINAPI
+#else
+LRESULT
+CALLBACK
+#endif
+DefWindowProcA(
+    HWND hWnd,
+    UINT Msg,
+    WPARAM wParam,
+    LPARAM lParam);
+WINUSERAPI
+#ifndef _MAC
+LRESULT
+WINAPI
+#else
+LRESULT
+CALLBACK
+#endif
+DefWindowProcW(
+    HWND hWnd,
+    UINT Msg,
+    WPARAM wParam,
+    LPARAM lParam);
+#ifdef UNICODE
+#define DefWindowProc  DefWindowProcW
+#else
+#define DefWindowProc  DefWindowProcA
+#endif // !UNICODE

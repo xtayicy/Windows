@@ -115,6 +115,10 @@ SOURCE=..\..\..\VC98\Include\WINGDI.H
 # End Source File
 # Begin Source File
 
+SOURCE=..\..\..\VC98\Include\WINNLS.H
+# End Source File
+# Begin Source File
+
 SOURCE=..\..\..\VC98\Include\WINUSER.H
 # End Source File
 # End Group

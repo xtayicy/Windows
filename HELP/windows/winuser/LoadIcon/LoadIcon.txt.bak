@@ -1,0 +1,17 @@
+WINUSERAPI
+HICON
+WINAPI
+LoadIconA(
+    HINSTANCE hInstance,
+    LPCSTR lpIconName);
+WINUSERAPI
+HICON
+WINAPI
+LoadIconW(
+    HINSTANCE hInstance,
+    LPCWSTR lpIconName);
+#ifdef UNICODE
+#define LoadIcon  LoadIconW
+#else
+#define LoadIcon  LoadIconA
+#endif // !UNICODE

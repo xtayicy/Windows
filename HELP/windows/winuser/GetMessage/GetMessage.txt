@@ -1,0 +1,21 @@
+WINUSERAPI
+BOOL
+WINAPI
+GetMessageA(
+    LPMSG lpMsg,
+    HWND hWnd ,
+    UINT wMsgFilterMin,
+    UINT wMsgFilterMax);
+WINUSERAPI
+BOOL
+WINAPI
+GetMessageW(
+    LPMSG lpMsg,
+    HWND hWnd ,
+    UINT wMsgFilterMin,
+    UINT wMsgFilterMax);
+#ifdef UNICODE
+#define GetMessage  GetMessageW
+#else
+#define GetMessage  GetMessageA
+#endif // !UNICODE

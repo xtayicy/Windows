@@ -1,0 +1,5 @@
+WINUSERAPI
+BOOL
+WINAPI
+TranslateMessage(
+    CONST MSG *lpMsg);

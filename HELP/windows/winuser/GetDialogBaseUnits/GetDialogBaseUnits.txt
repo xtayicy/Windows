@@ -1,0 +1,4 @@
+WINUSERAPI
+long
+WINAPI
+GetDialogBaseUnits(VOID);

@@ -1,0 +1,6 @@
+WINUSERAPI
+BOOL
+WINAPI
+EndPaint(
+    HWND hWnd,
+    CONST PAINTSTRUCT *lpPaint);

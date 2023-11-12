@@ -1,0 +1,6 @@
+WINBASEAPI
+LPVOID
+WINAPI
+LockResource(
+        HGLOBAL hResData
+        );

@@ -1,0 +1,17 @@
+WINBASEAPI
+int
+WINAPI
+lstrlenA(
+    LPCSTR lpString
+    );
+WINBASEAPI
+int
+WINAPI
+lstrlenW(
+    LPCWSTR lpString
+    );
+#ifdef UNICODE
+#define lstrlen  lstrlenW
+#else
+#define lstrlen  lstrlenA
+#endif // !UNICODE

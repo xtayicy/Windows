@@ -1,0 +1,8 @@
+WINUSERAPI
+int
+WINAPI
+SetScrollPos(
+    HWND hWnd,
+    int nBar,
+    int nPos,
+    BOOL bRedraw);

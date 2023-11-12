@@ -1,0 +1,5 @@
+WINUSERAPI
+BOOL
+WINAPI
+IsClipboardFormatAvailable(
+    UINT format);

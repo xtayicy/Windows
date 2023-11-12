@@ -1,0 +1,5 @@
+WINUSERAPI
+HCURSOR
+WINAPI
+SetCursor(
+    HCURSOR hCursor);

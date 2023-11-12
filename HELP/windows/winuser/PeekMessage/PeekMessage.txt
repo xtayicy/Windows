@@ -1,0 +1,30 @@
+WINUSERAPI
+BOOL
+WINAPI
+PeekMessageA(
+    LPMSG lpMsg,
+    HWND hWnd ,
+    UINT wMsgFilterMin,
+    UINT wMsgFilterMax,
+    UINT wRemoveMsg);
+WINUSERAPI
+BOOL
+WINAPI
+PeekMessageW(
+    LPMSG lpMsg,
+    HWND hWnd ,
+    UINT wMsgFilterMin,
+    UINT wMsgFilterMax,
+    UINT wRemoveMsg);
+#ifdef UNICODE
+#define PeekMessage  PeekMessageW
+#else
+#define PeekMessage  PeekMessageA
+#endif // !UNICODE
+
+/*
+ * PeekMessage() Options
+ */
+#define PM_NOREMOVE         0x0000
+#define PM_REMOVE           0x0001
+#define PM_NOYIELD          0x0002

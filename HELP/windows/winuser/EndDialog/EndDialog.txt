@@ -1,0 +1,6 @@
+WINUSERAPI
+BOOL
+WINAPI
+EndDialog(
+    HWND hDlg,
+    int nResult);

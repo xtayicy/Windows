@@ -1,0 +1,7 @@
+WINUSERAPI
+BOOL
+WINAPI
+InvalidateRect(
+    HWND hWnd ,
+    CONST RECT *lpRect,
+    BOOL bErase);

@@ -1,0 +1,8 @@
+WINUSERAPI
+UINT
+WINAPI
+SetTimer(
+    HWND hWnd ,
+    UINT nIDEvent,
+    UINT uElapse,
+    TIMERPROC lpTimerFunc);

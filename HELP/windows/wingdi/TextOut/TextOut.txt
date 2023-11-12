@@ -1,0 +1,7 @@
+WINGDIAPI BOOL  WINAPI TextOutA(HDC, int, int, LPCSTR, int);
+WINGDIAPI BOOL  WINAPI TextOutW(HDC, int, int, LPCWSTR, int);
+#ifdef UNICODE
+#define TextOut  TextOutW
+#else
+#define TextOut  TextOutA
+#endif // !UNICODE

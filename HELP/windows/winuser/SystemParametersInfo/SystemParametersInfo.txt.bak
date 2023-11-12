@@ -1,0 +1,21 @@
+WINUSERAPI
+BOOL
+WINAPI
+SystemParametersInfoA(
+    UINT uiAction,
+    UINT uiParam,
+    PVOID pvParam,
+    UINT fWinIni);
+WINUSERAPI
+BOOL
+WINAPI
+SystemParametersInfoW(
+    UINT uiAction,
+    UINT uiParam,
+    PVOID pvParam,
+    UINT fWinIni);
+#ifdef UNICODE
+#define SystemParametersInfo  SystemParametersInfoW
+#else
+#define SystemParametersInfo  SystemParametersInfoA
+#endif // !UNICODE

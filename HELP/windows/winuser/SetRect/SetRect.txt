@@ -1,0 +1,9 @@
+WINUSERAPI
+BOOL
+WINAPI
+SetRect(
+    LPRECT lprc,
+    int xLeft,
+    int yTop,
+    int xRight,
+    int yBottom);

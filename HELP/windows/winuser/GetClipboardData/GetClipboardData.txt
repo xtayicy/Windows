@@ -1,0 +1,5 @@
+WINUSERAPI
+HANDLE
+WINAPI
+    GetClipboardData(
+    UINT uFormat);

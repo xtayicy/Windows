@@ -1,0 +1,6 @@
+WINUSERAPI
+HANDLE
+WINAPI
+SetClipboardData(
+    UINT uFormat,
+    HANDLE hMem);

@@ -39,7 +39,7 @@ LRESULT CALLBACK WndProc(HWND hwnd,UINT message,WPARAM wParam,LPARAM lParam){
 
 			//RoundRect(hdc,cxClient / 4,cyClient / 4,3 * cxClient / 4,3 * cyClient / 4,cxClient / 4,cyClient / 4);
 			//k = GetLastError();
-			//FormatMessage(FORMAT_MESSAGE_FROM_SYSTEM,NULL,k,0,szError,sizeof(szError),NULL);
+			//FormatMessage(FORMAT_MESSAGE_FROM_SYSTEM,NULL,GetLastError(),0,szError,sizeof(szError),NULL);
 			
 			return 0;
 

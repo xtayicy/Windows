@@ -1,0 +1,8 @@
+WINUSERAPI
+BOOL
+WINAPI
+CreateCaret(
+    HWND hWnd,
+    HBITMAP hBitmap ,
+    int nWidth,
+    int nHeight);

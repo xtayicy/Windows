@@ -1,0 +1,7 @@
+WINGDIAPI HDC     WINAPI CreateDCA(LPCSTR, LPCSTR , LPCSTR , CONST DEVMODEA *);
+WINGDIAPI HDC     WINAPI CreateDCW(LPCWSTR, LPCWSTR , LPCWSTR , CONST DEVMODEW *);
+#ifdef UNICODE
+#define CreateDC  CreateDCW
+#else
+#define CreateDC  CreateDCA
+#endif // !UNICODE

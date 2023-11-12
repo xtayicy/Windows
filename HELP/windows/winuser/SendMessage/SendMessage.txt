@@ -1,0 +1,21 @@
+WINUSERAPI
+LRESULT
+WINAPI
+SendMessageA(
+    HWND hWnd,
+    UINT Msg,
+    WPARAM wParam,
+    LPARAM lParam);
+WINUSERAPI
+LRESULT
+WINAPI
+SendMessageW(
+    HWND hWnd,
+    UINT Msg,
+    WPARAM wParam,
+    LPARAM lParam);
+#ifdef UNICODE
+#define SendMessage  SendMessageW
+#else
+#define SendMessage  SendMessageA
+#endif // !UNICODE

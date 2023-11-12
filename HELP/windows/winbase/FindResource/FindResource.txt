@@ -1,0 +1,25 @@
+WINBASEAPI
+HRSRC
+WINAPI
+FindResourceA(
+    HMODULE hModule,
+    LPCSTR lpName,
+    LPCSTR lpType
+    );
+WINBASEAPI
+HRSRC
+WINAPI
+FindResourceW(
+    HMODULE hModule,
+    LPCWSTR lpName,
+    LPCWSTR lpType
+    );
+#ifdef UNICODE
+#define FindResource  FindResourceW
+#else
+#define FindResource  FindResourceA
+#endif // !UNICODE
+
+hResource = LoadResource (hInst, 
+                      FindResource (hInst, TEXT ("poepoem"),
+                                           TEXT ("TXT"))) ;

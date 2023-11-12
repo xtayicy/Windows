@@ -1,0 +1,13 @@
+WINGDIAPI HGDIOBJ WINAPI SelectObject(HDC, HGDIOBJ);
+
+hgdiobj：被选择的对象的句型，该指定对象必须由如下的函数创建。
+
+位图：CreateBitmap, CreateBitmapIndirect, CreateCompatible Bitmap, CreateDIBitmap, CreateDIBsection（只有内存设备上下文环境可选择位图，并且在同一时刻只能一个设备上下文环境选择位图）。
+
+画笔：CreateBrushIndirect, CreateDIBPatternBrush, CreateDIBPatternBrushPt, CreateHatchBrush, CreatePatternBrush, CreateSolidBrush。
+
+字体：CreateFont, CreateFontIndirect。
+
+笔：CreatePen, CreatePenIndirect。
+
+区域：CombineRgn, CreateEllipticRgn, CreateEllipticRgnIndirect, CreatePolygonRgn, CreateRectRgn, CreateRectRgnIndirect。

@@ -1,0 +1,9 @@
+#define DialogBoxA(hInstance, lpTemplate, hWndParent, lpDialogFunc) \
+DialogBoxParamA(hInstance, lpTemplate, hWndParent, lpDialogFunc, 0L)
+#define DialogBoxW(hInstance, lpTemplate, hWndParent, lpDialogFunc) \
+DialogBoxParamW(hInstance, lpTemplate, hWndParent, lpDialogFunc, 0L)
+#ifdef UNICODE
+#define DialogBox  DialogBoxW
+#else
+#define DialogBox  DialogBoxA
+#endif // !UNICODE

@@ -1,0 +1,5 @@
+WINUSERAPI
+int
+WINAPI
+ShowCursor(
+    BOOL bShow);

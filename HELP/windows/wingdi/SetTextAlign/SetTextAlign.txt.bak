@@ -1,0 +1,26 @@
+WINGDIAPI UINT  WINAPI SetTextAlign(HDC, UINT);
+
+/* Text Alignment Options */
+#define TA_NOUPDATECP                0
+#define TA_UPDATECP                  1
+
+#define TA_LEFT                      0
+#define TA_RIGHT                     2
+#define TA_CENTER                    6
+
+#define TA_TOP                       0
+#define TA_BOTTOM                    8
+#define TA_BASELINE                  24
+#if (WINVER >= 0x0400)
+#define TA_RTLREADING                256
+#define TA_MASK       (TA_BASELINE+TA_CENTER+TA_UPDATECP+TA_RTLREADING)
+#else
+#define TA_MASK       (TA_BASELINE+TA_CENTER+TA_UPDATECP)
+#endif
+
+#define VTA_BASELINE TA_BASELINE
+#define VTA_LEFT     TA_BOTTOM
+#define VTA_RIGHT    TA_TOP
+#define VTA_CENTER   TA_CENTER
+#define VTA_BOTTOM   TA_RIGHT
+#define VTA_TOP      TA_LEFT

@@ -1,0 +1,15 @@
+WINUSERAPI
+ATOM
+WINAPI
+RegisterClassA(
+    CONST WNDCLASSA *lpWndClass);
+WINUSERAPI
+ATOM
+WINAPI
+RegisterClassW(
+    CONST WNDCLASSW *lpWndClass);
+#ifdef UNICODE
+#define RegisterClass  RegisterClassW
+#else
+#define RegisterClass  RegisterClassA
+#endif // !UNICODE

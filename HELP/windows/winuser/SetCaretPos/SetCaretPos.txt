@@ -1,0 +1,6 @@
+WINUSERAPI
+BOOL
+WINAPI
+SetCaretPos(
+    int X,
+    int Y);

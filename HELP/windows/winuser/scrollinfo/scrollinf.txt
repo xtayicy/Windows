@@ -1,0 +1,32 @@
+typedef struct tagSCROLLINFO
+{
+    UINT    cbSize;
+    UINT    fMask;
+    int     nMin;
+    int     nMax;
+    UINT    nPage;
+    int     nPos;
+    int     nTrackPos;
+}   SCROLLINFO, FAR *LPSCROLLINFO;
+typedef SCROLLINFO CONST FAR *LPCSCROLLINFO;
+
+/*
+ * Scroll bar messages
+ */
+#ifndef NOWINMESSAGES
+#define SBM_SETPOS                  0x00E0 /*not in win3.1 */
+#define SBM_GETPOS                  0x00E1 /*not in win3.1 */
+#define SBM_SETRANGE                0x00E2 /*not in win3.1 */
+#define SBM_SETRANGEREDRAW          0x00E6 /*not in win3.1 */
+#define SBM_GETRANGE                0x00E3 /*not in win3.1 */
+#define SBM_ENABLE_ARROWS           0x00E4 /*not in win3.1 */
+#if(WINVER >= 0x0400)
+#define SBM_SETSCROLLINFO           0x00E9
+#define SBM_GETSCROLLINFO           0x00EA
+
+#define SIF_RANGE           0x0001
+#define SIF_PAGE            0x0002
+#define SIF_POS             0x0004
+#define SIF_DISABLENOSCROLL 0x0008
+#define SIF_TRACKPOS        0x0010
+#define SIF_ALL             (SIF_RANGE | SIF_PAGE | SIF_POS | SIF_TRACKPOS)

@@ -1,0 +1,11 @@
+WINUSERAPI
+BOOL
+WINAPI
+TrackPopupMenu(
+    HMENU hMenu,
+    UINT uFlags,
+    int x,
+    int y,
+    int nReserved,
+    HWND hWnd,
+    CONST RECT *prcRect);

@@ -1,0 +1,1 @@
+WINGDIAPI COLORREF WINAPI GetPixel(HDC, int, int);

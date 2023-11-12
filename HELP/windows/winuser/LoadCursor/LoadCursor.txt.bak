@@ -1,0 +1,17 @@
+WINUSERAPI
+HCURSOR
+WINAPI
+LoadCursorA(
+    HINSTANCE hInstance,
+    LPCSTR lpCursorName);
+WINUSERAPI
+HCURSOR
+WINAPI
+LoadCursorW(
+    HINSTANCE hInstance,
+    LPCWSTR lpCursorName);
+#ifdef UNICODE
+#define LoadCursor  LoadCursorW
+#else
+#define LoadCursor  LoadCursorA
+#endif // !UNICODE

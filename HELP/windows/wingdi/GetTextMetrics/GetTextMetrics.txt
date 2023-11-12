@@ -1,0 +1,7 @@
+WINGDIAPI BOOL WINAPI GetTextMetricsA(HDC, LPTEXTMETRICA);
+WINGDIAPI BOOL WINAPI GetTextMetricsW(HDC, LPTEXTMETRICW);
+#ifdef UNICODE
+#define GetTextMetrics  GetTextMetricsW
+#else
+#define GetTextMetrics  GetTextMetricsA
+#endif // !UNICODE

@@ -1,0 +1,21 @@
+WINBASEAPI
+int
+WINAPI
+GetLocaleInfoA(
+    LCID     Locale,
+    LCTYPE   LCType,
+    LPSTR  lpLCData,
+    int      cchData);
+WINBASEAPI
+int
+WINAPI
+GetLocaleInfoW(
+    LCID     Locale,
+    LCTYPE   LCType,
+    LPWSTR  lpLCData,
+    int      cchData);
+#ifdef UNICODE
+#define GetLocaleInfo  GetLocaleInfoW
+#else
+#define GetLocaleInfo  GetLocaleInfoA
+#endif // !UNICODE

@@ -1,0 +1,6 @@
+WINUSERAPI
+BOOL
+WINAPI
+GetClientRect(
+    HWND hWnd,
+    LPRECT lpRect);

@@ -3,7 +3,31 @@ Microsoft Developer Studio Workspace File, Format Version 6.00
 
 ###############################################################################
 
+Project: "AboutDialog"=".\AboutDialog\AboutDialog.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
 Project: "AltWind"=".\AltWind\AltWind.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Beeper"=".\Beeper\Beeper.dsp" - Package Owner=<4>
 
 Package=<5>
 {{{
@@ -39,7 +63,43 @@ Package=<4>
 
 ###############################################################################
 
+Project: "ButtonLook"=".\ButtonLook\ButtonLook.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
 Project: "CheckerMouse"=".\CheckerMouse\CheckerMouse.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "ClipText"=".\ClipText\ClipText.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Clock"=".\Clock\Clock.dsp" - Package Owner=<4>
 
 Package=<5>
 {{{
@@ -75,7 +135,31 @@ Package=<4>
 
 ###############################################################################
 
+Project: "CustomResources"=".\CustomResources\CustomResources.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
 Project: "DeviceCaps"=".\DeviceCaps\DeviceCaps.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "DigClock"=".\DigClock\DigClock.dsp" - Package Owner=<4>
 
 Package=<5>
 {{{
@@ -111,6 +195,18 @@ Package=<4>
 
 ###############################################################################
 
+Project: "IconDemo"=".\IconDemo\IconDemo.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
 Project: "KeyView"=".\KeyView\KeyView.dsp" - Package Owner=<4>
 
 Package=<5>
@@ -124,6 +220,54 @@ Package=<4>
 ###############################################################################
 
 Project: "LineDemo"=".\LineDemo\LineDemo.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "MenuDemo"=".\MenuDemo\MenuDemo.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "OwnerDrawButton"=".\OwnerDrawButton\OwnerDrawButton.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "PopMenu"=".\PopMenu\PopMenu.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "PupupEditor"=".\PupupEditor\PupupEditor.dsp" - Package Owner=<4>
 
 Package=<5>
 {{{
@@ -184,6 +328,18 @@ Package=<4>
 ###############################################################################
 
 Project: "Typer"=".\Typer\Typer.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "WhatColor"=".\WhatColor\WhatColor.dsp" - Package Owner=<4>
 
 Package=<5>
 {{{

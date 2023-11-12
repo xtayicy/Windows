@@ -1,0 +1,6 @@
+WINUSERAPI
+int
+WINAPI
+ReleaseDC(
+    HWND hWnd,
+    HDC hDC);

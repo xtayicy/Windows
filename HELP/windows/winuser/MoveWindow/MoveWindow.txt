@@ -1,0 +1,10 @@
+WINUSERAPI
+BOOL
+WINAPI
+MoveWindow(
+    HWND hWnd,
+    int X,
+    int Y,
+    int nWidth,
+    int nHeight,
+    BOOL bRepaint);

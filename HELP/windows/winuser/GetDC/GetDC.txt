@@ -1,0 +1,5 @@
+WINUSERAPI
+HDC
+WINAPI
+GetDC(
+    HWND hWnd);

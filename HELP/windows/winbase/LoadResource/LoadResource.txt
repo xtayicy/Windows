@@ -1,0 +1,3 @@
+hResource = LoadResource (hInst, 
+                      FindResource (hInst, TEXT ("poepoem"),
+                                           TEXT ("TXT"))) ;

@@ -1,0 +1,6 @@
+WINUSERAPI
+int
+WINAPI
+GetScrollPos(
+    HWND hWnd,
+    int nBar);

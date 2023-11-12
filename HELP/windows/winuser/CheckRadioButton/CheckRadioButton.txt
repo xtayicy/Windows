@@ -1,0 +1,8 @@
+WINUSERAPI
+BOOL
+WINAPI
+CheckRadioButton(
+    HWND hDlg,
+    int nIDFirstButton,
+    int nIDLastButton,
+    int nIDCheckButton);
