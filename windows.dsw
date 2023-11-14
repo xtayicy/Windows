@@ -51,6 +51,18 @@ Package=<4>
 
 ###############################################################################
 
+Project: "BitBlt"=".\BitBlt\BitBlt.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
 Project: "BlockMouse"=".\BlockMouse\BlockMouse.dsp" - Package Owner=<4>
 
 Package=<5>
@@ -147,6 +159,33 @@ Package=<4>
 
 ###############################################################################
 
+Project: "DLLLib"=".\DLLLib\DLLLib.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "DLLTest"=".\DLLTest\DLLTest.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name DLLLib
+    End Project Dependency
+}}}
+
+###############################################################################
+
 Project: "DeviceCaps"=".\DeviceCaps\DeviceCaps.dsp" - Package Owner=<4>
 
 Package=<5>
@@ -231,7 +270,31 @@ Package=<4>
 
 ###############################################################################
 
+Project: "MDIDemo"=".\MDIDemo\MDIDemo.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
 Project: "MenuDemo"=".\MenuDemo\MenuDemo.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "MetaFile"=".\MetaFile\MetaFile.dsp" - Package Owner=<4>
 
 Package=<5>
 {{{

@@ -1,22 +1,38 @@
 #include <windows.h>
+#include <process.h>
 
 int cxClient, cyClient;
+HWND hwnd;
 
-void DrawRectangle(HWND hwnd){
-	RECT rect;
-	HBRUSH hBrush;
-	HDC hdc;
-
-	if(cxClient == 0 || cyClient == 0){
-		return;
-	}
-
-	SetRect(&rect,rand() % cxClient,rand() % cyClient,rand() % cxClient,rand() % cyClient);
-	hBrush = CreateSolidBrush(RGB(rand() % 256,rand() % 256,rand() % 256));
-	hdc = GetDC(hwnd);
-	FillRect(hdc,&rect,hBrush);
-	ReleaseDC(hwnd,hdc);
-	DeleteObject(hBrush);
+void Thread (PVOID pvoid)
+{
+     HBRUSH hBrush ;
+     HDC    hdc ;
+     int    xLeft, xRight, yTop, yBottom, iRed, iGreen, iBlue ;
+     
+     while (TRUE)
+     {
+          if (cxClient != 0 || cyClient != 0)
+          {
+               xLeft   = rand () % cxClient ;
+               xRight  = rand () % cxClient ;
+               yTop    = rand () % cyClient ;
+               yBottom = rand () % cyClient ;
+               iRed    = rand () & 255 ;
+               iGreen  = rand () & 255 ;
+               iBlue   = rand () & 255 ;
+               
+               hdc = GetDC (hwnd) ;
+               hBrush = CreateSolidBrush (RGB (iRed, iGreen, iBlue)) ;
+               SelectObject (hdc, hBrush) ;
+               
+               Rectangle (hdc, min (xLeft, xRight), min (yTop, yBottom),
+                               max (xLeft, xRight), max (yTop, yBottom)) ;
+               
+               ReleaseDC (hwnd, hdc) ;
+               DeleteObject (hBrush) ;
+          }
+     }
 }
 
 LRESULT CALLBACK WndProc(HWND hwnd,UINT message,WPARAM wParam,LPARAM lParam){
@@ -26,7 +42,8 @@ LRESULT CALLBACK WndProc(HWND hwnd,UINT message,WPARAM wParam,LPARAM lParam){
 	//0x00000024
 	switch(message){
 		case WM_CREATE:
-			
+			_beginthread (Thread, 0, NULL) ;
+
 			return 0;
 
 		case WM_SIZE:
@@ -57,7 +74,6 @@ LRESULT CALLBACK WndProc(HWND hwnd,UINT message,WPARAM wParam,LPARAM lParam){
 int WINAPI WinMain(HINSTANCE hInstance,HINSTANCE hPrevInstance,LPSTR lpCmdLine,int nShowCmd){
 	WNDCLASS wndclass;
 	static TCHAR szAppName[] = TEXT("RandRect");
-	HWND hwnd;
 	MSG msg;
 	
 	wndclass.style = CS_HREDRAW | CS_VREDRAW;
@@ -79,17 +95,9 @@ int WINAPI WinMain(HINSTANCE hInstance,HINSTANCE hPrevInstance,LPSTR lpCmdLine,i
 	hwnd = CreateWindow(szAppName,TEXT("The RandRect program"),WS_OVERLAPPEDWINDOW,CW_USEDEFAULT,CW_USEDEFAULT,CW_USEDEFAULT,CW_USEDEFAULT,NULL,NULL,hInstance,NULL);
 	ShowWindow(hwnd,nShowCmd);
 	//UpdateWindow(hwnd);
-	while(TRUE){
-		if(PeekMessage(&msg,NULL,0,0,PM_REMOVE)){
-			if(msg.message == WM_QUIT){
-				break;
-			}
-
-			TranslateMessage(&msg);
-			DispatchMessage(&msg);
-		}else{
-			DrawRectangle(hwnd);
-		}
+	while(GetMessage(&msg,NULL,0,0)){
+		TranslateMessage(&msg);
+		DispatchMessage(&msg);
 	}
 
 	return 0;
