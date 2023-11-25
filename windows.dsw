@@ -282,6 +282,30 @@ Package=<4>
 
 ###############################################################################
 
+Project: "MFCMultipleDemo"=".\MFCMultipleDemo\MFCMultipleDemo.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "MFCSingleDemo"=".\MFCSingleDemo\MFCSingleDemo.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
 Project: "MenuDemo"=".\MenuDemo\MenuDemo.dsp" - Package Owner=<4>
 
 Package=<5>

@@ -82,8 +82,6 @@ BOOL CALLBACK AboutDlgProc (HWND hDlg, UINT message,WPARAM wParam, LPARAM lParam
 
 
 LRESULT CALLBACK WndProc(HWND hwnd,UINT message,WPARAM wParam,LPARAM lParam){
-	HDC hdc;
-	PAINTSTRUCT ps;
 	static HINSTANCE hInstance ;
 	char szError[256];
 	
@@ -109,15 +107,7 @@ LRESULT CALLBACK WndProc(HWND hwnd,UINT message,WPARAM wParam,LPARAM lParam){
 
 			return 0;
 
-		case WM_SIZE:
-
-			return 0;
-
 		case WM_PAINT:
-			hdc = BeginPaint(hwnd,&ps);
-			
-			EndPaint(hwnd,&ps);
-			
 			PaintWindow (hwnd, iCurrentColor, iCurrentFigure) ;
 
 			return 0;
@@ -127,7 +117,6 @@ LRESULT CALLBACK WndProc(HWND hwnd,UINT message,WPARAM wParam,LPARAM lParam){
 
 			return 0;
 	}
-	
 
 	return DefWindowProc(hwnd,message,wParam,lParam);
 }
