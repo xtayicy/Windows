@@ -109,37 +109,36 @@ void CMainFrame::Dump(CDumpContext& dc) const
 void CMainFrame::OnDatabaseTest() 
 {
 	// TODO: Add your command handler code here
-	char *sql = "Insert into Person values('Marry')";
+	char *sql = "SELECT * FROM PERSON";
 	HENV henv;
 	HDBC hdbc;
 	RETCODE rc;
 	char username[10];
 	char password[10];
 	char sourcename[30];
-// SWORD LenSourceName;
- //SWORD LenSourceDescription;
- HSTMT FAR *phstmt;
- phstmt=(HSTMT FAR *)malloc(sizeof(HSTMT FAR));
-// char * token;
- strcpy(sourcename,"DbDemo");
- strcpy(username,"root");
- strcpy(password,"root");
- rc=SQLAllocEnv(&henv);
- if(rc==SQL_SUCCESS)
- {
-	rc=SQLAllocConnect(henv,&hdbc);
-	if(rc==SQL_SUCCESS)
-	{
-	 rc=SQLConnect(hdbc,(UCHAR *)sourcename,SQL_NTS,(UCHAR *)username,SQL_NTS,(UCHAR *)password,SQL_NTS);
-	 if(rc==SQL_SUCCESS||rc==SQL_SUCCESS_WITH_INFO)
-		 rc=SQLAllocStmt(hdbc,phstmt);
-	     rc=SQLExecDirect(*phstmt,(UCHAR FAR *)sql,SQL_NTS);
-		 SQLDisconnect(hdbc);
-	}
-    SQLFreeConnect(hdbc);
- }
 
- SQLFreeEnv(henv);
+	HSTMT FAR *phstmt;
+	phstmt=(HSTMT FAR *)malloc(sizeof(HSTMT FAR));
+
+	strcpy(sourcename,"DbDemo");
+	strcpy(username,"root");
+	strcpy(password,"root");
+	rc=SQLAllocEnv(&henv);
+	if(rc==SQL_SUCCESS){
+		rc=SQLAllocConnect(henv,&hdbc);
+		if(rc==SQL_SUCCESS){
+			rc=SQLConnect(hdbc,(UCHAR *)sourcename,SQL_NTS,(UCHAR *)username,SQL_NTS,(UCHAR *)password,SQL_NTS);
+			if(rc==SQL_SUCCESS||rc==SQL_SUCCESS_WITH_INFO)
+				rc=SQLAllocStmt(hdbc,phstmt);
+			
+			rc=SQLExecDirect(*phstmt,(UCHAR FAR *)sql,SQL_NTS);
+			SQLDisconnect(hdbc);
+		}
+
+		SQLFreeConnect(hdbc);
+	}
+
+	SQLFreeEnv(henv);
 }
 
 void CMainFrame::OnDatabaseMysql() 
