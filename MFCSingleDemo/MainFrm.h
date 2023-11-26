@@ -47,6 +47,7 @@ protected:
 	afx_msg void OnDialogModal();
 	afx_msg void OnDialogModeless();
 	afx_msg void OnFileOpen();
+	afx_msg void OnMysqlConnect();
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
 };

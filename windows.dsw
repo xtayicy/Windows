@@ -186,6 +186,18 @@ Package=<4>
 
 ###############################################################################
 
+Project: "DatabaseDemo"=".\DatabaseDemo\DatabaseDemo.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
 Project: "DeviceCaps"=".\DeviceCaps\DeviceCaps.dsp" - Package Owner=<4>
 
 Package=<5>

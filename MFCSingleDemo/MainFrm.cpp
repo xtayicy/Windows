@@ -24,6 +24,7 @@ BEGIN_MESSAGE_MAP(CMainFrame, CFrameWnd)
 	ON_COMMAND(ID_DIALOG_MODAL, OnDialogModal)
 	ON_COMMAND(ID_DIALOG_MODELESS, OnDialogModeless)
 	ON_COMMAND(ID_FILE_OPEN, OnFileOpen)
+	ON_COMMAND(ID_MYSQL_CONNECT, OnMysqlConnect)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
@@ -142,4 +143,9 @@ void CMainFrame::OnFileOpen()
 	createTime = fileStatus.m_ctime.Format("\n创建时间：%Y年%m月%d日");
 	information = filename + fileSize + createTime;
 	MessageBox(information);
+}
+
+void CMainFrame::OnMysqlConnect() 
+{
+	// TODO: Add your command handler code here
 }

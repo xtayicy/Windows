@@ -151,6 +151,10 @@ BEGIN
         MENUITEM "模态对话框",                  ID_DIALOG_MODAL
         MENUITEM "非模态对话框",                ID_DIALOG_MODELESS
     END
+    POPUP "mysql数据库"
+    BEGIN
+        MENUITEM "连接",                        ID_MYSQL_CONNECT
+    END
 END
 
 

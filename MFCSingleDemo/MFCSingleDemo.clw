@@ -15,11 +15,11 @@ Class3=CMFCSingleDemoView
 Class4=CMainFrame
 
 ResourceCount=4
-Resource1=IDR_MAINFRAME
+Resource1=IDD_DIALOG_SCROLL
 Class5=CAboutDlg
-Resource2=IDD_ABOUTBOX
+Resource2=IDR_MAINFRAME
 Class6=CScrollDlg
-Resource3=IDD_DIALOG_SCROLL
+Resource3=IDD_ABOUTBOX
 Class7=CDialogModalAndModeless
 Resource4=IDD_DIALOG
 
@@ -52,7 +52,7 @@ Type=0
 HeaderFile=MainFrm.h
 ImplementationFile=MainFrm.cpp
 Filter=T
-LastObject=ID_FILE_OPEN
+LastObject=ID_MYSQL_CONNECT
 BaseClass=CFrameWnd
 VirtualFilter=fWC
 
@@ -100,7 +100,8 @@ Command20=ID_COLOR_CUSTOM
 Command21=ID_APP_ABOUT
 Command22=ID_DIALOG_MODAL
 Command23=ID_DIALOG_MODELESS
-CommandCount=23
+Command24=ID_MYSQL_CONNECT
+CommandCount=24
 
 [ACL:IDR_MAINFRAME]
 Type=1
