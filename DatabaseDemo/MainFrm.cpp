@@ -139,21 +139,26 @@ void CMainFrame::OnDatabaseTest()
 					rc=SQLExecDirect(*phstmt,(UCHAR FAR *)sql,SQL_NTS);
 					if(rc == SQL_SUCCESS){
 						//AfxMessageBox("success");
-						rc = SQLFetch(*phstmt);
-						if(rc == SQL_ERROR || rc == SQL_SUCCESS_WITH_INFO){
-							AfxMessageBox("error");
-						}else if(rc == SQL_SUCCESS){
-							//AfxMessageBox("SQL_SUCCESS");
-							FILE *fp;
-							SQLGetData(*phstmt, 1, SQL_C_CHAR, szName, NAME_LEN, &cbName);
-							fp = fopen("out.txt","w+");
-							fprintf(fp,"%s",szName);
-							fclose(fp);
+						while(TRUE){
+							rc = SQLFetch(*phstmt);
+							if(rc == SQL_ERROR || rc == SQL_SUCCESS_WITH_INFO){
+								AfxMessageBox("error");
+							}
+							
+							if(rc == SQL_SUCCESS){
+								//AfxMessageBox("SQL_SUCCESS");
+								FILE *fp;
+								SQLGetData(*phstmt, 1, SQL_C_CHAR, szName, NAME_LEN, &cbName);
+								fp = fopen("out.txt","a+");
+								fprintf(fp,"%s",szName);
+								fclose(fp);
+							}else{
+								break;
+							}
 						}
 
 						SQLDisconnect(hdbc);
 					}
-					
 				}
 			}	
 		}
