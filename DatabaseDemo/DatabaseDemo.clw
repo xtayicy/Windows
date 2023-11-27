@@ -16,8 +16,8 @@ Class4=CMainFrame
 Class6=CAboutDlg
 
 ResourceCount=7
-Resource1=IDD_ABOUTBOX
-Resource2=IDR_MAINFRAME
+Resource1=IDR_MAINFRAME
+Resource2=IDD_ABOUTBOX
 Class5=CDatabaseDemoSet
 Resource7=IDD_DATABASEDEMO_FORM
 

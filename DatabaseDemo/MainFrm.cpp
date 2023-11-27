@@ -6,6 +6,8 @@
 
 #include "MainFrm.h"
 
+#define NAME_LEN 50
+
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #undef THIS_FILE
@@ -109,17 +111,19 @@ void CMainFrame::Dump(CDumpContext& dc) const
 void CMainFrame::OnDatabaseTest() 
 {
 	// TODO: Add your command handler code here
-	char *sql = "SELECT * FROM PERSON";
+	char *sql = "SELECT * FROM Person";
 	HENV henv;
 	HDBC hdbc;
 	RETCODE rc;
 	char username[10];
 	char password[10];
 	char sourcename[30];
+	SQLCHAR szName[NAME_LEN];
+	SQLINTEGER cbName;
 
 	HSTMT FAR *phstmt;
 	phstmt=(HSTMT FAR *)malloc(sizeof(HSTMT FAR));
-
+	
 	strcpy(sourcename,"DbDemo");
 	strcpy(username,"root");
 	strcpy(password,"root");
@@ -128,11 +132,30 @@ void CMainFrame::OnDatabaseTest()
 		rc=SQLAllocConnect(henv,&hdbc);
 		if(rc==SQL_SUCCESS){
 			rc=SQLConnect(hdbc,(UCHAR *)sourcename,SQL_NTS,(UCHAR *)username,SQL_NTS,(UCHAR *)password,SQL_NTS);
-			if(rc==SQL_SUCCESS||rc==SQL_SUCCESS_WITH_INFO)
+			if(rc==SQL_SUCCESS||rc==SQL_SUCCESS_WITH_INFO){
 				rc=SQLAllocStmt(hdbc,phstmt);
-			
-			rc=SQLExecDirect(*phstmt,(UCHAR FAR *)sql,SQL_NTS);
-			SQLDisconnect(hdbc);
+				if(rc == SQL_SUCCESS){
+					//AfxMessageBox("success");
+					rc=SQLExecDirect(*phstmt,(UCHAR FAR *)sql,SQL_NTS);
+					if(rc == SQL_SUCCESS){
+						//AfxMessageBox("success");
+						rc = SQLFetch(*phstmt);
+						if(rc == SQL_ERROR || rc == SQL_SUCCESS_WITH_INFO){
+							AfxMessageBox("error");
+						}else if(rc == SQL_SUCCESS){
+							//AfxMessageBox("SQL_SUCCESS");
+							FILE *fp;
+							SQLGetData(*phstmt, 1, SQL_C_CHAR, szName, NAME_LEN, &cbName);
+							fp = fopen("out.txt","w+");
+							fprintf(fp,"%s",szName);
+							fclose(fp);
+						}
+
+						SQLDisconnect(hdbc);
+					}
+					
+				}
+			}	
 		}
 
 		SQLFreeConnect(hdbc);
