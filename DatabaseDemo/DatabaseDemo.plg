@@ -6,19 +6,19 @@
 --------------------Configuration: DatabaseDemo - Win32 Debug--------------------
 </h3>
 <h3>Command Lines</h3>
-Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP52ED.tmp" with contents
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPA60C.tmp" with contents
 [
 /nologo /subsystem:windows /incremental:yes /pdb:"Debug/DatabaseDemo.pdb" /debug /machine:I386 /out:"Debug/DatabaseDemo.exe" /pdbtype:sept 
 ".\Debug\DatabaseDemo.obj"
 ".\Debug\DatabaseDemoDoc.obj"
 ".\Debug\DatabaseDemoSet.obj"
 ".\Debug\DatabaseDemoView.obj"
+".\Debug\InputDlg2.obj"
 ".\Debug\MainFrm.obj"
 ".\Debug\StdAfx.obj"
 ".\Debug\DatabaseDemo.res"
-".\Debug\InputDlg2.obj"
 ]
-Creating command line "link.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP52ED.tmp"
+Creating command line "link.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPA60C.tmp"
 <h3>Output Window</h3>
 Linking...
 

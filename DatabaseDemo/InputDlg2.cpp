@@ -57,9 +57,8 @@ BOOL CInputDlg::OnInitDialog()
 	RETCODE rc;
 	HSTMT hstmt;
 
-
-	UCHAR szTableName[128],szTableType[128];
-	SDWORD cbTableName,cbTableType;
+	UCHAR szTableName[128];
+	SDWORD cbTableName;
 	LPCTSTR tmptable;
 	tmptable=(char *)malloc(100);
 	char username[10];
@@ -85,7 +84,6 @@ BOOL CInputDlg::OnInitDialog()
 					//MessageBox("success");
 					SQLNumResultCols(hstmt,pcol);
 					SQLBindCol(hstmt,3,SQL_C_CHAR,szTableName,sizeof(szTableName),&cbTableName);
-					SQLBindCol(hstmt,4,SQL_C_CHAR,szTableType,sizeof(szTableType),&cbTableType);
 					while(TRUE){
 						rc=SQLFetch(hstmt);
 						if(rc==SQL_SUCCESS||rc==SQL_SUCCESS_WITH_INFO){
@@ -117,7 +115,6 @@ void CInputDlg::OnKillfocusEdit1()
 void CInputDlg::OnDblclkList1() 
 {
 	// TODO: Add your control notification handler code here
-	
 }
 
 void CInputDlg::OnDblclkList2(NMHDR* pNMHDR, LRESULT* pResult) 
