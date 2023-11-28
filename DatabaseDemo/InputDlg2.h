@@ -19,9 +19,9 @@ public:
 // Dialog Data
 	//{{AFX_DATA(CInputDlg)
 	enum { IDD = IDD_DIALOG1 };
-	CListCtrl	m_table;
-	CListBox	m_show_content;
+	CListCtrl	m_show_content;
 	CString	m_sql;
+	CString	m_show_table;
 	//}}AFX_DATA
 
 
@@ -38,9 +38,7 @@ protected:
 	// Generated message map functions
 	//{{AFX_MSG(CInputDlg)
 	virtual BOOL OnInitDialog();
-	afx_msg void OnKillfocusEdit1();
 	afx_msg void OnDblclkList1();
-	afx_msg void OnDblclkList2(NMHDR* pNMHDR, LRESULT* pResult);
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
 };

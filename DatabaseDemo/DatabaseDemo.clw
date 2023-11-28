@@ -2,7 +2,7 @@
 
 [General Info]
 Version=1
-LastClass=CDatabaseDemoView
+LastClass=CInputDlg
 LastTemplate=CDialog
 NewFileInclude1=#include "stdafx.h"
 NewFileInclude2=#include "DatabaseDemo.h"
@@ -16,10 +16,10 @@ Class4=CMainFrame
 Class6=CAboutDlg
 
 ResourceCount=4
-Resource1=IDR_MAINFRAME
-Resource2=IDD_ABOUTBOX
+Resource1=IDD_ABOUTBOX
+Resource2=IDD_DATABASEDEMO_FORM
 Class5=CDatabaseDemoSet
-Resource3=IDD_DATABASEDEMO_FORM
+Resource3=IDR_MAINFRAME
 Class7=CInputDlg
 Resource4=IDD_DIALOG1
 

@@ -20,6 +20,7 @@ CInputDlg::CInputDlg(CWnd* pParent /*=NULL*/)
 {
 	//{{AFX_DATA_INIT(CInputDlg)
 	m_sql = _T("");
+	m_show_table = _T("");
 	//}}AFX_DATA_INIT
 }
 
@@ -28,18 +29,16 @@ void CInputDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialog::DoDataExchange(pDX);
 	//{{AFX_DATA_MAP(CInputDlg)
-	DDX_Control(pDX, IDC_LIST2, m_table);
-	DDX_Control(pDX, IDC_LIST1, m_show_content);
+	DDX_Control(pDX, IDC_LIST2, m_show_content);
 	DDX_Text(pDX, IDC_EDIT1, m_sql);
+	DDX_LBString(pDX, IDC_LIST1, m_show_table);
 	//}}AFX_DATA_MAP
 }
 
 
 BEGIN_MESSAGE_MAP(CInputDlg, CDialog)
 	//{{AFX_MSG_MAP(CInputDlg)
-	ON_EN_KILLFOCUS(IDC_EDIT1, OnKillfocusEdit1)
 	ON_LBN_DBLCLK(IDC_LIST1, OnDblclkList1)
-	ON_NOTIFY(NM_DBLCLK, IDC_LIST2, OnDblclkList2)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
@@ -107,19 +106,7 @@ BOOL CInputDlg::OnInitDialog()
 	              // EXCEPTION: OCX Property Pages should return FALSE
 }
 
-void CInputDlg::OnKillfocusEdit1() 
-{
-	// TODO: Add your control notification handler code here
-}
-
 void CInputDlg::OnDblclkList1() 
 {
 	// TODO: Add your control notification handler code here
-}
-
-void CInputDlg::OnDblclkList2(NMHDR* pNMHDR, LRESULT* pResult) 
-{
-	// TODO: Add your control notification handler code here
-	
-	*pResult = 0;
 }
