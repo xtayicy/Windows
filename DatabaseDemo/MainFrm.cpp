@@ -23,7 +23,6 @@ BEGIN_MESSAGE_MAP(CMainFrame, CFrameWnd)
 	//{{AFX_MSG_MAP(CMainFrame)
 	ON_WM_CREATE()
 	ON_COMMAND(ID_DATABASE_TEST, OnDatabaseTest)
-	ON_COMMAND(ID_DATABASE_MYSQL, OnDatabaseMysql)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
@@ -167,10 +166,4 @@ void CMainFrame::OnDatabaseTest()
 	}
 
 	SQLFreeEnv(henv);
-}
-
-void CMainFrame::OnDatabaseMysql() 
-{
-	// TODO: Add your command handler code here
-	
 }

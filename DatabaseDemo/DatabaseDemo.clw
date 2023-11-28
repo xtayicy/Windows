@@ -2,24 +2,26 @@
 
 [General Info]
 Version=1
-LastClass=CMainFrame
+LastClass=CDatabaseDemoView
 LastTemplate=CDialog
 NewFileInclude1=#include "stdafx.h"
 NewFileInclude2=#include "DatabaseDemo.h"
 LastPage=0
 
-ClassCount=6
+ClassCount=7
 Class1=CDatabaseDemoApp
 Class2=CDatabaseDemoDoc
 Class3=CDatabaseDemoView
 Class4=CMainFrame
 Class6=CAboutDlg
 
-ResourceCount=7
-Resource1=IDD_ABOUTBOX
-Resource2=IDR_MAINFRAME
+ResourceCount=4
+Resource1=IDR_MAINFRAME
+Resource2=IDD_ABOUTBOX
 Class5=CDatabaseDemoSet
-Resource7=IDD_DATABASEDEMO_FORM
+Resource3=IDD_DATABASEDEMO_FORM
+Class7=CInputDlg
+Resource4=IDD_DIALOG1
 
 [CLS:CDatabaseDemoApp]
 Type=0
@@ -40,7 +42,7 @@ ImplementationFile=DatabaseDemoView.cpp
 Filter=D
 BaseClass=CRecordView
 VirtualFilter=RVWC
-LastObject=IDC_EDIT_USERNAME
+LastObject=ID_DATABASE_ODBC_API
 
 
 [CLS:CDatabaseDemoSet]
@@ -61,7 +63,7 @@ Type=0
 HeaderFile=MainFrm.h
 ImplementationFile=MainFrm.cpp
 Filter=T
-LastObject=ID_DATABASE_MYSQL
+LastObject=CMainFrame
 BaseClass=CFrameWnd
 VirtualFilter=fWC
 
@@ -107,7 +109,7 @@ Command18=ID_VIEW_TOOLBAR
 Command19=ID_VIEW_STATUS_BAR
 Command20=ID_APP_ABOUT
 Command21=ID_DATABASE_TEST
-Command22=ID_DATABASE_MYSQL
+Command22=ID_DATABASE_ODBC_API
 CommandCount=22
 
 [ACL:IDR_MAINFRAME]
@@ -153,4 +155,21 @@ Command10=ID_RECORD_NEXT
 Command11=ID_RECORD_LAST
 Command12=ID_APP_ABOUT
 CommandCount=12
+
+[DLG:IDD_DIALOG1]
+Type=1
+Class=CInputDlg
+ControlCount=3
+Control1=IDC_EDIT1,edit,1350631552
+Control2=IDC_LIST1,listbox,1352728833
+Control3=IDC_LIST2,SysListView32,1350631425
+
+[CLS:CInputDlg]
+Type=0
+HeaderFile=InputDlg2.h
+ImplementationFile=InputDlg2.cpp
+BaseClass=CDialog
+Filter=D
+VirtualFilter=dWC
+LastObject=CInputDlg
 

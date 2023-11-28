@@ -111,6 +111,10 @@ SOURCE=.\DatabaseDemoView.cpp
 # End Source File
 # Begin Source File
 
+SOURCE=.\InputDlg2.cpp
+# End Source File
+# Begin Source File
+
 SOURCE=.\MainFrm.cpp
 # End Source File
 # Begin Source File
@@ -137,6 +141,10 @@ SOURCE=.\DatabaseDemoSet.h
 # Begin Source File
 
 SOURCE=.\DatabaseDemoView.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\InputDlg2.h
 # End Source File
 # Begin Source File
 

@@ -7,6 +7,7 @@
 #include "DatabaseDemoSet.h"
 #include "DatabaseDemoDoc.h"
 #include "DatabaseDemoView.h"
+#include "InputDlg2.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -21,8 +22,7 @@ IMPLEMENT_DYNCREATE(CDatabaseDemoView, CRecordView)
 
 BEGIN_MESSAGE_MAP(CDatabaseDemoView, CRecordView)
 	//{{AFX_MSG_MAP(CDatabaseDemoView)
-		// NOTE - the ClassWizard will add and remove mapping macros here.
-		//    DO NOT EDIT what you see in these blocks of generated code!
+	ON_COMMAND(ID_DATABASE_ODBC_API, OnDatabaseOdbcApi)
 	//}}AFX_MSG_MAP
 	// Standard printing commands
 	ON_COMMAND(ID_FILE_PRINT, CRecordView::OnFilePrint)
@@ -123,3 +123,10 @@ CRecordset* CDatabaseDemoView::OnGetRecordset()
 
 /////////////////////////////////////////////////////////////////////////////
 // CDatabaseDemoView message handlers
+
+void CDatabaseDemoView::OnDatabaseOdbcApi() 
+{
+	// TODO: Add your command handler code here
+	CInputDlg dialog;
+	dialog.DoModal();
+}
