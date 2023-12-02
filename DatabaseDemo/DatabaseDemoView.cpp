@@ -7,7 +7,7 @@
 #include "DatabaseDemoSet.h"
 #include "DatabaseDemoDoc.h"
 #include "DatabaseDemoView.h"
-#include "InputDlg2.h"
+#include "ADODlg.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -22,7 +22,7 @@ IMPLEMENT_DYNCREATE(CDatabaseDemoView, CRecordView)
 
 BEGIN_MESSAGE_MAP(CDatabaseDemoView, CRecordView)
 	//{{AFX_MSG_MAP(CDatabaseDemoView)
-	ON_COMMAND(ID_DATABASE_ODBC_API, OnDatabaseOdbcApi)
+	ON_COMMAND(ID_DATABASE_ADO, OnDatabaseAdo)
 	//}}AFX_MSG_MAP
 	// Standard printing commands
 	ON_COMMAND(ID_FILE_PRINT, CRecordView::OnFilePrint)
@@ -38,7 +38,6 @@ CDatabaseDemoView::CDatabaseDemoView()
 {
 	//{{AFX_DATA_INIT(CDatabaseDemoView)
 	m_pSet = NULL;
-	m_username = _T("");
 	//}}AFX_DATA_INIT
 	// TODO: add construction code here
 
@@ -52,7 +51,6 @@ void CDatabaseDemoView::DoDataExchange(CDataExchange* pDX)
 {
 	CRecordView::DoDataExchange(pDX);
 	//{{AFX_DATA_MAP(CDatabaseDemoView)
-	DDX_Text(pDX, IDC_EDIT_USERNAME, m_username);
 	//}}AFX_DATA_MAP
 }
 
@@ -124,9 +122,7 @@ CRecordset* CDatabaseDemoView::OnGetRecordset()
 /////////////////////////////////////////////////////////////////////////////
 // CDatabaseDemoView message handlers
 
-void CDatabaseDemoView::OnDatabaseOdbcApi() 
-{
-	// TODO: Add your command handler code here
-	CInputDlg dialog;
-	dialog.DoModal();
+void CDatabaseDemoView::OnDatabaseAdo(){
+	ADODlg dlg;
+	dlg.DoModal();
 }

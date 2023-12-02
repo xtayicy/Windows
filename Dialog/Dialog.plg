@@ -1,0 +1,22 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Dialog - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "link.exe /nologo /subsystem:windows /incremental:yes /pdb:"Debug/Dialog.pdb" /debug /machine:I386 /out:"Debug/Dialog.exe" /pdbtype:sept  ".\Debug\Dialog.obj" ".\Debug\DialogDlg.obj" ".\Debug\StdAfx.obj" ".\Debug\Dialog.res" "
+<h3>Output Window</h3>
+Linking...
+Creating command line "bscmake.exe /nologo /o"Debug/Dialog.bsc"  ".\Debug\StdAfx.sbr" ".\Debug\Dialog.sbr" ".\Debug\DialogDlg.sbr""
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+Dialog.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

@@ -1,9 +1,9 @@
-// Created by Microsoft (R) C/C++ Compiler Version 12.00.8168.0 (2764df43).
+// Created by Microsoft (R) C/C++ Compiler Version 12.00.8168.0 (d8a2604a).
 //
 // msado15.tlh
 //
-// C++ source equivalent of type library c:\Program Files\Common Files\System\ado\msado15.dll
-// compiler-generated file created 11/26/23 at 14:26:17 - DO NOT EDIT!
+// C++ source equivalent of type library D:\Microsoft Visual Studio\MyProjects\Windows\DatabaseDemo\msado15.dll
+// compiler-generated file created 12/02/23 at 19:23:58 - DO NOT EDIT!
 
 #pragma once
 #pragma pack(push, 8)

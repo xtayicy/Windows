@@ -6,21 +6,29 @@
 --------------------Configuration: MFCSingleDemo - Win32 Debug--------------------
 </h3>
 <h3>Command Lines</h3>
-Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPD2DA.tmp" with contents
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP54A9.tmp" with contents
 [
-/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/MFCSingleDemo.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
-"D:\Microsoft Visual Studio\MyProjects\Windows\MFCSingleDemo\MainFrm.cpp"
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/MFCSingleDemo.pdb" /debug /machine:I386 /out:"Debug/MFCSingleDemo.exe" /pdbtype:sept 
+".\Debug\DialogModalAndModeless.obj"
+".\Debug\MainFrm.obj"
+".\Debug\MFCSingleDemo.obj"
+".\Debug\MFCSingleDemoDoc.obj"
+".\Debug\MFCSingleDemoView.obj"
+".\Debug\ScrollDlg.obj"
+".\Debug\StdAfx.obj"
+".\Debug\MFCSingleDemo.res"
 ]
-Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPD2DA.tmp" 
+Creating command line "link.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP54A9.tmp"
 <h3>Output Window</h3>
-Compiling...
-Skipping... (no relevant changes detected)
-MainFrm.cpp
+Linking...
+Creating command line "bscmake.exe /nologo /o"Debug/MFCSingleDemo.bsc"  ".\Debug\StdAfx.sbr" ".\Debug\DialogModalAndModeless.sbr" ".\Debug\MainFrm.sbr" ".\Debug\MFCSingleDemo.sbr" ".\Debug\MFCSingleDemoDoc.sbr" ".\Debug\MFCSingleDemoView.sbr" ".\Debug\ScrollDlg.sbr""
+Creating browse info file...
+<h3>Output Window</h3>
 
 
 
 <h3>Results</h3>
-MainFrm.obj - 0 error(s), 0 warning(s)
+MFCSingleDemo.exe - 0 error(s), 0 warning(s)
 </pre>
 </body>
 </html>

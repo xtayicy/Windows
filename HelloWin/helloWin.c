@@ -11,15 +11,11 @@ LRESULT CALLBACK WndProc(HWND hwnd,UINT message,WPARAM wParam,LPARAM lParam){
 
 			return 0;
 
-		case WM_SIZE:
-
-			return 0;
-
 		case WM_PAINT:
 			hdc = BeginPaint(hwnd,&ps);
 			//left 0x00000000 top 0x00000000 right 0x000003f1 1009 bottom 0x000001ef 495
 			GetClientRect(hwnd,&rect);
-			DrawText(hdc,TEXT("Hello,Windows 98"),-1,&rect,DT_SINGLELINE | DT_CENTER | DT_VCENTER);
+			DrawText(hdc,TEXT("Hello,Windows 98!"),-1,&rect,DT_SINGLELINE | DT_CENTER | DT_VCENTER);
 			EndPaint(hwnd,&ps);
 			
 			return 0;
@@ -30,7 +26,6 @@ LRESULT CALLBACK WndProc(HWND hwnd,UINT message,WPARAM wParam,LPARAM lParam){
 			return 0;
 	}
 	
-
 	return DefWindowProc(hwnd,message,wParam,lParam);
 }
 

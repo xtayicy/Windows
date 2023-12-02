@@ -210,6 +210,18 @@ Package=<4>
 
 ###############################################################################
 
+Project: "Dialog"=".\Dialog\Dialog.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
 Project: "DigClock"=".\DigClock\DigClock.dsp" - Package Owner=<4>
 
 Package=<5>

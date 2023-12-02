@@ -21,7 +21,6 @@ public:
 	//{{AFX_DATA(CDatabaseDemoView)
 	enum { IDD = IDD_DATABASEDEMO_FORM };
 	CDatabaseDemoSet* m_pSet;
-	CString	m_username;
 	//}}AFX_DATA
 
 // Attributes
@@ -58,7 +57,7 @@ protected:
 // Generated message map functions
 protected:
 	//{{AFX_MSG(CDatabaseDemoView)
-	afx_msg void OnDatabaseOdbcApi();
+	afx_msg void OnDatabaseAdo();
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
 };

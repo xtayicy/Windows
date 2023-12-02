@@ -2,13 +2,13 @@
 
 [General Info]
 Version=1
-LastClass=CInputDlg
+LastClass=ADODlg
 LastTemplate=CDialog
 NewFileInclude1=#include "stdafx.h"
 NewFileInclude2=#include "DatabaseDemo.h"
 LastPage=0
 
-ClassCount=7
+ClassCount=8
 Class1=CDatabaseDemoApp
 Class2=CDatabaseDemoDoc
 Class3=CDatabaseDemoView
@@ -16,11 +16,12 @@ Class4=CMainFrame
 Class6=CAboutDlg
 
 ResourceCount=4
-Resource1=IDD_ABOUTBOX
-Resource2=IDD_DATABASEDEMO_FORM
+Resource1=IDD_DATABASEDEMO_FORM
+Resource2=IDR_MAINFRAME
 Class5=CDatabaseDemoSet
-Resource3=IDR_MAINFRAME
 Class7=CInputDlg
+Resource3=IDD_ABOUTBOX
+Class8=ADODlg
 Resource4=IDD_DIALOG1
 
 [CLS:CDatabaseDemoApp]
@@ -42,7 +43,7 @@ ImplementationFile=DatabaseDemoView.cpp
 Filter=D
 BaseClass=CRecordView
 VirtualFilter=RVWC
-LastObject=ID_DATABASE_ODBC_API
+LastObject=ID_DATABASE_ADO
 
 
 [CLS:CDatabaseDemoSet]
@@ -109,7 +110,7 @@ Command18=ID_VIEW_TOOLBAR
 Command19=ID_VIEW_STATUS_BAR
 Command20=ID_APP_ABOUT
 Command21=ID_DATABASE_TEST
-Command22=ID_DATABASE_ODBC_API
+Command22=ID_DATABASE_ADO
 CommandCount=22
 
 [ACL:IDR_MAINFRAME]
@@ -156,14 +157,6 @@ Command11=ID_RECORD_LAST
 Command12=ID_APP_ABOUT
 CommandCount=12
 
-[DLG:IDD_DIALOG1]
-Type=1
-Class=CInputDlg
-ControlCount=3
-Control1=IDC_EDIT1,edit,1350631552
-Control2=IDC_LIST1,listbox,1352728833
-Control3=IDC_LIST2,SysListView32,1350631425
-
 [CLS:CInputDlg]
 Type=0
 HeaderFile=InputDlg2.h
@@ -172,4 +165,21 @@ BaseClass=CDialog
 Filter=D
 VirtualFilter=dWC
 LastObject=CInputDlg
+
+[DLG:IDD_DIALOG1]
+Type=1
+Class=ADODlg
+ControlCount=3
+Control1=IDOK,button,1342242817
+Control2=IDCANCEL,button,1342242816
+Control3=IDC_LIST1,SysListView32,1350631813
+
+[CLS:ADODlg]
+Type=0
+HeaderFile=ADODlg.h
+ImplementationFile=ADODlg.cpp
+BaseClass=CDialog
+Filter=D
+LastObject=ADODlg
+VirtualFilter=dWC
 
