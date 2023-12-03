@@ -99,6 +99,18 @@ Package=<4>
 
 ###############################################################################
 
+Project: "ChildProcess"=".\ChildProcess\ChildProcess.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
 Project: "ClipText"=".\ClipText\ClipText.dsp" - Package Owner=<4>
 
 Package=<5>
@@ -367,6 +379,18 @@ Package=<4>
 ###############################################################################
 
 Project: "PopMenu"=".\PopMenu\PopMenu.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Process"=".\Process\Process.dsp" - Package Owner=<4>
 
 Package=<5>
 {{{
