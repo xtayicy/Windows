@@ -103,6 +103,7 @@ LRESULT CALLBACK WndProc(HWND hwnd,UINT message,WPARAM wParam,LPARAM lParam){
 			return 0;
 
 		case WM_VSCROLL:
+			MessageBox(hwnd,"WM_VSCROLL","show",0);
 			si.cbSize = sizeof(si);
 			si.fMask = SIF_ALL;
 			GetScrollInfo(hwnd,SB_VERT,&si);
@@ -154,7 +155,7 @@ LRESULT CALLBACK WndProc(HWND hwnd,UINT message,WPARAM wParam,LPARAM lParam){
 			GetScrollInfo(hwnd,SB_VERT,&si);
 			if(si.nPos != iVscrollPos){
 				ScrollWindow(hwnd,0,cyChar * (iVscrollPos - si.nPos),NULL,NULL);
-				//UpdateWindow(hwnd);
+				UpdateWindow(hwnd);
 			}
 
 			return 0;

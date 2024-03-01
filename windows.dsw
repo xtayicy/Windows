@@ -462,6 +462,18 @@ Package=<4>
 
 ###############################################################################
 
+Project: "SysMetrics1"=".\SysMetrics1\SysMetrics1.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
 Project: "Typer"=".\Typer\Typer.dsp" - Package Owner=<4>
 
 Package=<5>

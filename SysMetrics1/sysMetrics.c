@@ -1,21 +1,38 @@
+#define WINVER 0x0500
 #include <windows.h>
+#include "sysmets.h"
 
 LRESULT CALLBACK WndProc(HWND hwnd,UINT message,WPARAM wParam,LPARAM lParam){
 	HDC hdc;
 	PAINTSTRUCT ps;
-	RECT rect;
+	TEXTMETRIC tm;
+	static int cxChar,cxCaps,cyChar;
+	int i;
+	TCHAR szBuffer[10];
+	//RECT rect;
 	//0x00000024
 	switch(message){
 		case WM_CREATE:
-			PlaySound(TEXT("hellowin.wav"),NULL,SND_FILENAME | SND_ASYNC);
+			hdc = GetDC(hwnd);
+			
+			GetTextMetrics(hdc,&tm);
+			cxChar = tm.tmAveCharWidth;
+			cxCaps = (tm.tmPitchAndFamily & 1 ? 3 : 2) * cxChar / 2;
+			cyChar = tm.tmHeight + tm.tmExternalLeading;
+
+			ReleaseDC(hwnd,hdc);
 
 			return 0;
 
 		case WM_PAINT:
 			hdc = BeginPaint(hwnd,&ps);
-			//left 0x00000000 top 0x00000000 right 0x000003f1 1009 bottom 0x000001ef 495
-			GetClientRect(hwnd,&rect);
-			DrawText(hdc,TEXT("Hello,Windows 98!"),-1,&rect,DT_SINGLELINE | DT_CENTER | DT_VCENTER);
+			
+			for(i = 0;i < NUMLINES;i++){
+				TextOut(hdc,0,cyChar * i,sysmetrics[i].szLabel,lstrlen(sysmetrics[i].szLabel));
+				TextOut(hdc,22 * cxCaps,cyChar * i,sysmetrics[i].szDesc,lstrlen(sysmetrics[i].szDesc));
+				TextOut(hdc, 22 * cxCaps + 40 * cxChar,cyChar * i,szBuffer,wsprintf(szBuffer,TEXT("%5d"),GetSystemMetrics(sysmetrics[i].iIndex)));
+			}
+
 			EndPaint(hwnd,&ps);
 			
 			return 0;
@@ -31,7 +48,7 @@ LRESULT CALLBACK WndProc(HWND hwnd,UINT message,WPARAM wParam,LPARAM lParam){
 
 int WINAPI WinMain(HINSTANCE hInstance,HINSTANCE hPrevInstance,LPSTR lpCmdLine,int nShowCmd){
 	WNDCLASS wndclass;
-	static TCHAR szAppName[] = TEXT("helloWindows");
+	static TCHAR szAppName[] = TEXT("sysMetrics1");
 	HWND hwnd;
 	MSG msg;
 	
@@ -51,7 +68,7 @@ int WINAPI WinMain(HINSTANCE hInstance,HINSTANCE hPrevInstance,LPSTR lpCmdLine,i
 		return 0;
 	}
 
-	hwnd = CreateWindow(szAppName,TEXT("The hello program"),WS_OVERLAPPEDWINDOW,CW_USEDEFAULT,CW_USEDEFAULT,CW_USEDEFAULT,CW_USEDEFAULT,NULL,NULL,hInstance,NULL);
+	hwnd = CreateWindow(szAppName,TEXT("The sysMetrics1 program"),WS_OVERLAPPEDWINDOW,CW_USEDEFAULT,CW_USEDEFAULT,CW_USEDEFAULT,CW_USEDEFAULT,NULL,NULL,hInstance,NULL);
 	ShowWindow(hwnd,nShowCmd);
 	UpdateWindow(hwnd);
 	while(GetMessage(&msg,NULL,0,0)){
