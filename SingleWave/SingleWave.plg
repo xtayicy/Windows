@@ -6,22 +6,20 @@
 --------------------Configuration: SingleWave - Win32 Debug--------------------
 </h3>
 <h3>Command Lines</h3>
-Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPDD73.tmp" with contents
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP2C00.tmp" with contents
 [
-kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/SingleWave.pdb" /debug /machine:I386 /out:"Debug/SingleWave.exe" /pdbtype:sept 
-".\Debug\singleWave.obj"
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /FR"Debug/" /Fp"Debug/SingleWave.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\Microsoft Visual Studio\MyProjects\Windows\SingleWave\singleWave.c"
 ]
-Creating command line "link.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPDD73.tmp"
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP2C00.tmp" 
 <h3>Output Window</h3>
-Linking...
-Creating command line "bscmake.exe /nologo /o"Debug/SingleWave.bsc"  ".\Debug\singleWave.sbr""
-Creating browse info file...
-<h3>Output Window</h3>
+Compiling...
+singleWave.c
 
 
 
 <h3>Results</h3>
-SingleWave.exe - 0 error(s), 0 warning(s)
+singleWave.obj - 0 error(s), 0 warning(s)
 </pre>
 </body>
 </html>

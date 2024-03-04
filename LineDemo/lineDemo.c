@@ -8,10 +8,6 @@ LRESULT CALLBACK WndProc(HWND hwnd,UINT message,WPARAM wParam,LPARAM lParam){
 
 	//0x00000024
 	switch(message){
-		case WM_CREATE:
-
-			return 0;
-
 		case WM_SIZE:
 			// 0x000003f1 1009
 			cxClient = LOWORD(lParam);
@@ -48,7 +44,6 @@ LRESULT CALLBACK WndProc(HWND hwnd,UINT message,WPARAM wParam,LPARAM lParam){
 
 			return 0;
 	}
-	
 
 	return DefWindowProc(hwnd,message,wParam,lParam);
 }
@@ -83,5 +78,5 @@ int WINAPI WinMain(HINSTANCE hInstance,HINSTANCE hPrevInstance,LPSTR lpCmdLine,i
 		DispatchMessage(&msg);
 	}
 
-	return 0;
+	return msg.wParam;
 }

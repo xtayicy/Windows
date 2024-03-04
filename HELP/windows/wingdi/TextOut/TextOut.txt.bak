@@ -10,3 +10,7 @@ TextOut函数的xStart和yStart参数的含义可由SetTextAlign函数改变。
 TA_LEFT、TA_RIGHT和TA_CENTER旗标影响使用xStart在水平方向上定位字符串的方式。
 默认值是TA_LEFT。如果在SetTextAlign函数中指定了TA_RIGHT，则后面的TextOut呼叫会将字符串的最后一个字符定位于xStart，
 如果指定了TA_CENTER，则字符串的中心位于xStart。
+
+类似地，TA_TOP、TA_BOTTOM和TA_BASELINE旗标影响字符串的垂直位置。
+TA_TOP是默认值，它意味着字符串的字母顶端位于yStart，使用TA_BOTTOM意味着字符串位于yStart之上。
+可以使用TA_BASELINE定位字符串，使基准线位于yStart。基准线是如小写字母p、q、y等字母下部的线。

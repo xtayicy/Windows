@@ -210,6 +210,18 @@ Package=<4>
 
 ###############################################################################
 
+Project: "DevCaps1"=".\DevCaps1\DevCaps1.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
 Project: "DeviceCaps"=".\DeviceCaps\DeviceCaps.dsp" - Package Owner=<4>
 
 Package=<5>
@@ -283,6 +295,18 @@ Package=<4>
 ###############################################################################
 
 Project: "KeyView"=".\KeyView\KeyView.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "KeyView1"=".\KeyView1\KeyView1.dsp" - Package Owner=<4>
 
 Package=<5>
 {{{
@@ -463,6 +487,42 @@ Package=<4>
 ###############################################################################
 
 Project: "SysMetrics1"=".\SysMetrics1\SysMetrics1.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "SysMetrics2"=".\SysMetrics2\SysMetrics2.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "SysMetrics3"=".\SysMetrics3\SysMetrics3.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "SysMetrics4"=".\SysMetrics4\SysMetrics4.dsp" - Package Owner=<4>
 
 Package=<5>
 {{{

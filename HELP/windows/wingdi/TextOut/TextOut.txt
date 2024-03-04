@@ -4,7 +4,7 @@ WINGDIAPI BOOL  WINAPI TextOutW(HDC, int, int, LPCWSTR, int);
 #define TextOut  TextOutW
 #else
 #define TextOut  TextOutA
-#endif // !UNICODE
+#endif // !UNICODEe
 
 TextOut函数的xStart和yStart参数的含义可由SetTextAlign函数改变。
 TA_LEFT、TA_RIGHT和TA_CENTER旗标影响使用xStart在水平方向上定位字符串的方式。
