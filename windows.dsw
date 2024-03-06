@@ -39,6 +39,30 @@ Package=<4>
 
 ###############################################################################
 
+Project: "Beeper1"=".\Beeper1\Beeper1.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Beeper2"=".\Beeper2\Beeper2.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
 Project: "Bezier"=".\Bezier\Bezier.dsp" - Package Owner=<4>
 
 Package=<5>
@@ -75,7 +99,79 @@ Package=<4>
 
 ###############################################################################
 
+Project: "Blokout1"=".\Blokout1\Blokout1.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Blokout2"=".\Blokout2\Blokout2.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
 Project: "ButtonLook"=".\ButtonLook\ButtonLook.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Checker1"=".\Checker1\Checker1.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Checker2"=".\Checker2\Checker2.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Checker3"=".\Checker3\Checker3.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Checker4"=".\Checker4\Checker4.dsp" - Package Owner=<4>
 
 Package=<5>
 {{{
@@ -136,6 +232,18 @@ Package=<4>
 ###############################################################################
 
 Project: "Clover"=".\Clover\Clover.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Colors1"=".\Colors1\Colors1.dsp" - Package Owner=<4>
 
 Package=<5>
 {{{
@@ -318,6 +426,18 @@ Package=<4>
 
 ###############################################################################
 
+Project: "KeyView2"=".\KeyView2\KeyView2.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
 Project: "LineDemo"=".\LineDemo\LineDemo.dsp" - Package Owner=<4>
 
 Package=<5>
@@ -403,6 +523,18 @@ Package=<4>
 ###############################################################################
 
 Project: "PopMenu"=".\PopMenu\PopMenu.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "PopPad1"=".\PopPad1\PopPad1.dsp" - Package Owner=<4>
 
 Package=<5>
 {{{
