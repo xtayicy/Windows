@@ -1,20 +1,24 @@
 #include <windows.h>
+#define ID_EDIT 1
 
 LRESULT CALLBACK WndProc(HWND hwnd,UINT message,WPARAM wParam,LPARAM lParam){
-	HDC hdc;
-	PAINTSTRUCT ps;
+	static HWND hwndEdit;
 	
 	//0x00000024
 	switch(message){
 		case WM_CREATE:
+			hwndEdit = CreateWindow("edit",NULL,WS_CHILD | WS_VISIBLE | WS_HSCROLL | WS_VSCROLL | WS_BORDER | ES_LEFT | ES_MULTILINE | ES_AUTOHSCROLL | ES_AUTOVSCROLL,0,0,0,0,hwnd,(HMENU)ID_EDIT,((LPCREATESTRUCT)lParam)->hInstance,NULL);
 
 			return 0;
 
-		case WM_PAINT:
-			hdc = BeginPaint(hwnd,&ps);
+		case WM_SETFOCUS:
+			SetFocus(hwndEdit);
 
-			EndPaint(hwnd,&ps);
-			
+			return 0;
+
+		case WM_SIZE:
+			MoveWindow(hwndEdit,0,0,LOWORD(lParam),HIWORD(lParam),TRUE);
+
 			return 0;
 
 		case WM_DESTROY:
