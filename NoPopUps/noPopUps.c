@@ -1,21 +1,52 @@
 #include <windows.h>
+#include "resource.h"
 
 LRESULT CALLBACK WndProc(HWND hwnd,UINT message,WPARAM wParam,LPARAM lParam){
 	HDC hdc;
 	PAINTSTRUCT ps;
-	RECT rect;
+	HINSTANCE hInstance;
+	static HMENU hMenuMain,hMenuFile,hMenuEdit;
+	
 	//0x00000024
 	switch(message){
 		case WM_CREATE:
-			PlaySound("hellowin.wav",NULL,SND_FILENAME | SND_ASYNC);
+			hInstance = (HINSTANCE)GetWindowLong(hwnd,GWL_HINSTANCE);
+			hMenuMain = LoadMenu(hInstance,"MenuMain");
+			hMenuFile = LoadMenu(hInstance,"MenuFile");
+			hMenuEdit = LoadMenu(hInstance,"MenuEdit");
+			SetMenu(hwnd,hMenuMain);
 
 			return 0;
 
+		case WM_COMMAND:
+			switch(LOWORD(wParam)){
+				case IDM_FILE:
+					SetMenu(hwnd,hMenuFile);
+
+					return 0;
+
+				case IDM_MAIN:
+					SetMenu(hwnd,hMenuMain);
+
+					return 0;
+
+				case IDM_EDIT:
+					SetMenu(hwnd,hMenuEdit);
+
+					return 0;
+
+				case IDM_FILE_NEW:
+				case IDM_EDIT_UNDO:
+					MessageBeep(0);
+
+					return 0;
+			}
+
+			break;
+
 		case WM_PAINT:
 			hdc = BeginPaint(hwnd,&ps);
-			//left 0x00000000 top 0x00000000 right 0x000003f1 1009 bottom 0x000001ef 495
-			GetClientRect(hwnd,&rect);
-			DrawText(hdc,"Hello,Windows 98!",-1,&rect,DT_SINGLELINE | DT_CENTER | DT_VCENTER);
+			
 			EndPaint(hwnd,&ps);
 			
 			return 0;
@@ -31,7 +62,7 @@ LRESULT CALLBACK WndProc(HWND hwnd,UINT message,WPARAM wParam,LPARAM lParam){
 
 int WINAPI WinMain(HINSTANCE hInstance,HINSTANCE hPrevInstance,LPSTR lpCmdLine,int nShowCmd){
 	WNDCLASS wndclass;
-	static TCHAR szAppName[] = "helloWindows";
+	static TCHAR szAppName[] = "NoPupUps";
 	HWND hwnd;
 	MSG msg;
 	
@@ -51,7 +82,7 @@ int WINAPI WinMain(HINSTANCE hInstance,HINSTANCE hPrevInstance,LPSTR lpCmdLine,i
 		return 0;
 	}
 
-	hwnd = CreateWindow(szAppName,"The hello program",WS_OVERLAPPEDWINDOW,CW_USEDEFAULT,CW_USEDEFAULT,CW_USEDEFAULT,CW_USEDEFAULT,NULL,NULL,hInstance,NULL);
+	hwnd = CreateWindow(szAppName,"The NoPupUps program",WS_OVERLAPPEDWINDOW,CW_USEDEFAULT,CW_USEDEFAULT,CW_USEDEFAULT,CW_USEDEFAULT,NULL,NULL,hInstance,NULL);
 	ShowWindow(hwnd,nShowCmd);
 	UpdateWindow(hwnd);
 	while(GetMessage(&msg,NULL,0,0)){

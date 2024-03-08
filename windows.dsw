@@ -534,7 +534,43 @@ Package=<4>
 
 ###############################################################################
 
+Project: "NoPopUps"=".\NoPopUps\NoPopUps.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
 Project: "OwnerDrawButton"=".\OwnerDrawButton\OwnerDrawButton.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "PoePoem"=".\PoePoem\PoePoem.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "PoorMenu"=".\PoorMenu\PoorMenu.dsp" - Package Owner=<4>
 
 Package=<5>
 {{{
@@ -559,6 +595,18 @@ Package=<4>
 ###############################################################################
 
 Project: "PopPad1"=".\PopPad1\PopPad1.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "PopPad2"=".\PopPad2\PopPad2.dsp" - Package Owner=<4>
 
 Package=<5>
 {{{
