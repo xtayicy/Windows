@@ -3,6 +3,42 @@ Microsoft Developer Studio Workspace File, Format Version 6.00
 
 ###############################################################################
 
+Project: "About1"=".\About1\About1.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "About2"=".\About2\About2.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "About3"=".\About3\About3.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
 Project: "AboutDialog"=".\AboutDialog\AboutDialog.dsp" - Package Owner=<4>
 
 Package=<5>
@@ -87,6 +123,18 @@ Package=<4>
 
 ###############################################################################
 
+Project: "BitMask"=".\BitMask\BitMask.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
 Project: "BlockMouse"=".\BlockMouse\BlockMouse.dsp" - Package Owner=<4>
 
 Package=<5>
@@ -112,6 +160,54 @@ Package=<4>
 ###############################################################################
 
 Project: "Blokout2"=".\Blokout2\Blokout2.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Bounce"=".\Bounce\Bounce.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Bricks1"=".\Bricks1\Bricks1.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Bricks2"=".\Bricks2\Bricks2.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Bricks3"=".\Bricks3\Bricks3.dsp" - Package Owner=<4>
 
 Package=<5>
 {{{
@@ -219,6 +315,18 @@ Package=<4>
 
 ###############################################################################
 
+Project: "ClipView"=".\ClipView\ClipView.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
 Project: "Clock"=".\Clock\Clock.dsp" - Package Owner=<4>
 
 Package=<5>
@@ -244,6 +352,30 @@ Package=<4>
 ###############################################################################
 
 Project: "Colors1"=".\Colors1\Colors1.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Colors2"=".\Colors2\Colors2.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Colors3"=".\Colors3\Colors3.dsp" - Package Owner=<4>
 
 Package=<5>
 {{{
@@ -330,6 +462,18 @@ Package=<4>
 
 ###############################################################################
 
+Project: "DevCaps2"=".\DevCaps2\DevCaps2.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
 Project: "DeviceCaps"=".\DeviceCaps\DeviceCaps.dsp" - Package Owner=<4>
 
 Package=<5>
@@ -378,7 +522,31 @@ Package=<4>
 
 ###############################################################################
 
+Project: "GrafMenu"=".\GrafMenu\GrafMenu.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
 Project: "Head"=".\Head\Head.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "HelloBit"=".\HelloBit\HelloBit.dsp" - Package Owner=<4>
 
 Package=<5>
 {{{
@@ -618,6 +786,30 @@ Package=<4>
 
 ###############################################################################
 
+Project: "PopPad3"=".\PopPad3\PopPad3.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Print"=".\Print\Print.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
 Project: "Process"=".\Process\Process.dsp" - Package Owner=<4>
 
 Package=<5>
@@ -654,6 +846,18 @@ Package=<4>
 
 ###############################################################################
 
+Project: "Scramble"=".\Scramble\Scramble.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
 Project: "SingleWave"=".\SingleWave\SingleWave.dsp" - Package Owner=<4>
 
 Package=<5>
@@ -666,7 +870,31 @@ Package=<4>
 
 ###############################################################################
 
+Project: "Sketch"=".\Sketch\Sketch.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
 Project: "StockFont"=".\StockFont\StockFont.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Stretch"=".\Stretch\Stretch.dsp" - Package Owner=<4>
 
 Package=<5>
 {{{
