@@ -51,6 +51,18 @@ Package=<4>
 
 ###############################################################################
 
+Project: "AddSynth"=".\AddSynth\AddSynth.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
 Project: "AltWind"=".\AltWind\AltWind.dsp" - Package Owner=<4>
 
 Package=<5>
@@ -111,7 +123,43 @@ Package=<4>
 
 ###############################################################################
 
+Project: "BigJob1"=".\BigJob1\BigJob1.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "BigJob2"=".\BigJob2\BigJob2.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
 Project: "BitBlt"=".\BitBlt\BitBlt.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "BitLib"=".\BitLib\BitLib.dsp" - Package Owner=<4>
 
 Package=<5>
 {{{
@@ -292,6 +340,18 @@ Package=<4>
 ###############################################################################
 
 Project: "ChildProcess"=".\ChildProcess\ChildProcess.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "ChooseFont"=".\ChooseFont\ChooseFont.dsp" - Package Owner=<4>
 
 Package=<5>
 {{{
@@ -510,6 +570,45 @@ Package=<4>
 
 ###############################################################################
 
+Project: "EdrLib"=".\EdrLib\EdrLib.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "EdrTest"=".\EdrTest\EdrTest.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name EdrLib
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "EndJoin"=".\EndJoin\EndJoin.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
 Project: "Environ"=".\Environ\Environ.dsp" - Package Owner=<4>
 
 Package=<5>
@@ -522,7 +621,55 @@ Package=<4>
 
 ###############################################################################
 
+Project: "FontDemo"=".\FontDemo\FontDemo.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
 Project: "GrafMenu"=".\GrafMenu\GrafMenu.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Grays1"=".\Grays1\Grays1.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Grays2"=".\Grays2\Grays2.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Grays3"=".\Grays3\Grays3.dsp" - Package Owner=<4>
 
 Package=<5>
 {{{
@@ -583,6 +730,30 @@ Package=<4>
 ###############################################################################
 
 Project: "IconDemo"=".\IconDemo\IconDemo.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Justfy1"=".\Justfy1\Justfy1.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Justify2"=".\Justify2\Justify2.dsp" - Package Owner=<4>
 
 Package=<5>
 {{{
@@ -702,6 +873,30 @@ Package=<4>
 
 ###############################################################################
 
+Project: "Multi1"=".\Multi1\Multi1.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Multi2"=".\Multi2\Multi2.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
 Project: "NoPopUps"=".\NoPopUps\NoPopUps.dsp" - Package Owner=<4>
 
 Package=<5>
@@ -715,6 +910,18 @@ Package=<4>
 ###############################################################################
 
 Project: "OwnerDrawButton"=".\OwnerDrawButton\OwnerDrawButton.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "PickFont"=".\PickFont\PickFont.dsp" - Package Owner=<4>
 
 Package=<5>
 {{{
@@ -858,6 +1065,30 @@ Package=<4>
 
 ###############################################################################
 
+Project: "ShowBit"=".\ShowBit\ShowBit.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "SineWave"=".\SineWave\SineWave.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
 Project: "SingleWave"=".\SingleWave\SingleWave.dsp" - Package Owner=<4>
 
 Package=<5>
@@ -966,7 +1197,31 @@ Package=<4>
 
 ###############################################################################
 
+Project: "TestMci"=".\TestMci\TestMci.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
 Project: "Typer"=".\Typer\Typer.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Unichars"=".\Unichars\Unichars.dsp" - Package Owner=<4>
 
 Package=<5>
 {{{
